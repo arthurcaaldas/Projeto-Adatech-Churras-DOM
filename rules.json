@@ -25,9 +25,9 @@
     "children": 0.5
   },
   "soda": {
-    "men": 0.2,
-    "women": 0.2,
-    "children": 0.2
+    "men": 0.4,
+    "women": 0.4,
+    "children": 0.4
   },
   "water": {
     "men": 0.2,
