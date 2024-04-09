@@ -19,23 +19,9 @@ const init = () => {
 
   for (let index = 0; index < inputs.length; index++) {
     const element = inputs[index];
+    validate(element)
 
-    element.addEventListener('change', async () => {
-      console.log(element.value);
-      if (element.type === 'text' || element.type === 'email') {
-        element.style = !element.value
-          ? 'border-color: red'
-          : 'border-color: green';
-        return;
-      }
-
-      if (element.type === 'checkbox') {
-        element.style = !element.checked
-          ? 'outline-color: red'
-          : 'outline-color: green';
-        return;
-      }
-    });
+    element.addEventListener(element.type === 'checkbox' ? 'change' : 'keyup', () => validate(element));
   }
   
   for (let index = 0; index < buttons.length; index++) {
@@ -57,6 +43,29 @@ const getRules = () => {
     .then((response) => resolve(response.json()))
     .catch(err => reject(err))
   });
+}
+
+const validate = (element) => {
+  if (element.type === 'text') {
+    element.style = !element.value
+      ? 'border-color: red'
+      : 'border-color: green';
+    return;
+  }
+
+  if (element.type == 'email') {
+    element.style = (!element.value || (element.value && !element.checkValidity()))
+      ? 'border-color: red'
+      : 'border-color: green';
+    return;
+  }
+
+  if (element.type === 'checkbox') {
+    element.style = !element.checked
+      ? 'outline-color: red'
+      : 'outline-color: green';
+    return;
+  }
 }
 
 const validateStep1 = () => {
