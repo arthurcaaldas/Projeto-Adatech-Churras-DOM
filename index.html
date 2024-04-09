@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churrascômetro</title>
+  
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <main>
+    <aside></aside>
+    
+    <section>
+      <header>
+        <h2>Churrascômetro</h2>
+        <p>Informe seus dados</p>
+      </header>
+      
+      <div id="step1" class="step show">
+        <div>
+          <label for="name">Nome:</label>
+          <input type="text" id="name" class="validate" required><br>
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" class="validate" required><br>
+        </div>
+        <div>
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" class="validate" maxlength="8" required placeholder="Digite somente números. Ex: 12345000"><br>
+        </div>
+        <div class="check-container">
+          <label class="check">
+            <input type="checkbox" id="consent" class="validate">
+            <p>Aceito receber e-mails com promoções</p>
+          </label><br>
+          <button class="change-step" data-step="2">Próximo</button>
+        </div>
+      </div>
+      
+      <div id="step2" class="step">
+        <label for="men">Homens:</label>
+        <input type="number" id="men" name="men" min="0" required value="1"><br>
+        <label for="women">Mulheres:</label>
+        <input type="number" id="women" name="women" min="0" required value="0"><br>
+        <label for="children">Crianças:</label>
+        <input type="number" id="children" name="children" min="0" required value="0"><br>
+        <label for="drinkers">Pessoas que bebem:</label>
+        <input type="number" id="drinkers" name="drinkers" min="0" required value="0"><br>
+        <div class="grouped-button">
+          <button class="change-step" data-step="1">Anterior</button>
+          <button class="change-step" data-step="3">Calcular</button>
+        </div>
+      </div>
+      
+      <div id="result" class="step">
+        <div id="resultItems"></div>
+        <div class="grouped-button">
+          <button class="change-step button" data-step="1">Nova simulação</button>
+          <button class="change-step button" data-step="2">Novas quantidades</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
