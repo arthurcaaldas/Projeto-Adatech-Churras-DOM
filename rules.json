@@ -1,0 +1,42 @@
+{
+  "meat": {
+    "men": 0.4,
+    "women": 0.32,
+    "children": 0.2
+  },
+  "bread": {
+    "men": 2,
+    "women": 2,
+    "children": 1
+  },
+  "charcoal": {
+    "men": 1,
+    "women": 1,
+    "children": 1
+  },
+  "salt": {
+    "men": 0.04,
+    "women": 0.04,
+    "children": 0.04
+  },
+  "ice": {
+    "men": 0.5,
+    "women": 0.5,
+    "children": 0.5
+  },
+  "soda": {
+    "men": 0.2,
+    "women": 0.2,
+    "children": 0.2
+  },
+  "water": {
+    "men": 0.2,
+    "women": 0.2,
+    "children": 0.2
+  },
+  "beer": {
+    "men": 3,
+    "women": 3,
+    "children": 0
+  }
+}
